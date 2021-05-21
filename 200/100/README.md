@@ -10,6 +10,8 @@ A simple JavaScript library to turn text into vector UML sequence diagrams. Heav
 
 See https://bramp.github.io/js-sequence-diagrams/
 
+See also [How to generate a sequence diagram within markdown using js sequence diagram and mkdocs](https://medium.com/tenxor/how-to-generate-a-sequence-diagram-within-markdown-using-js-sequence-diagram-and-mkdocs-91dd4fe0b8fb)
+
 ## 300 - Github Repository
 
 See https://github.com/bramp/js-sequence-diagrams
