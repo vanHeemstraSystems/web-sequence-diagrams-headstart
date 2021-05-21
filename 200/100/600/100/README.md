@@ -33,12 +33,14 @@ Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org/).
 
 ## 400 - Install js-sequence-diagrams Bower Package
 
-Go inside the js-sequence-diagrams directory:
+Create a new project (e.g. called "app") in your workspace:
 
 ```
-$ cd js-sequence-diagrams
-$ pwd 
-/home/$USER/js-sequence-diagrams
+$ PROJECT_NAME="app"
+$ mkdir $PROJECT_NAME
+$ cd $PROJECT NAME
+$ pwd
+/home/$USER/git/app
 ```
 
 Run ```bower install bramp/js-sequence-diagrams``` and include the scripts below:
