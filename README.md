@@ -7,6 +7,7 @@ Based on "Creating Your Sequence Diagram" at https://medium.com/pragmatic-progra
 
 ### 100 - Web Sequence Diagrams
 
+See [README.md](./100/100/README.md)
 
 ## 200 - Open Source Self-Hosted Alternatives
 
