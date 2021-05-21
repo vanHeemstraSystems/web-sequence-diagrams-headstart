@@ -21,6 +21,10 @@ Bower is a command line utility. Install it with npm.
 
 ```$ sudo npm install -g bower```
 
+Check with:
+
+```$ bower --version```
+
 Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org/).
 
 ## 300 - Install js-sequence-diagrams Bower Package
