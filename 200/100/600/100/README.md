@@ -9,8 +9,8 @@ See https://nodejs.org/en/download/
 Check with:
 
 ```
-$ nodejs version
-$ npm version
+$ node --version
+$ npm --version
 ```
 
 ## 200 - Install Bower
