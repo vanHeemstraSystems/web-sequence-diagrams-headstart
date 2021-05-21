@@ -115,6 +115,15 @@ snap.svg#0.4.1 bower_components/snap.svg
 eve-raphael#0.5.0 bower_components/eve-raphael
 ```
 
+You should now have a directory called ```bower_components``` in the root of your ```app``` project:
+
+```
+$ pwd
+/home/$USER/git/app
+$ ls 
+bower_components
+```
+
 Create an HTML page, called index.html
 
 ```
@@ -135,7 +144,7 @@ Add the following content to the index.html:
 
   <title>App</title>
   <meta name="description" content="App">
-  <meta name="author" content="SitePoint">
+  <meta name="author" content="me">
 
   <link rel="stylesheet" href="css/styles.css?v=1.0">
 
