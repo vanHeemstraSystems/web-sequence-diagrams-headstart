@@ -33,7 +33,7 @@ Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org/).
 
 ## 400 - Install js-sequence-diagrams Bower Package
 
-Create a new project (e.g. called "app") in your workspace:
+Create a new project (e.g. called "app") in your git workspace:
 
 ```
 $ PROJECT_NAME="app"
