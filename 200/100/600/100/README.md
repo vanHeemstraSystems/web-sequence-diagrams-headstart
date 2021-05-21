@@ -159,10 +159,10 @@ Add the following content to the index.html:
 Include the scripts below inside the ```<head>...</head>``` section of the index.html:
 
 ```
-<script src="{{ bower directory }}/bower-webfontloader/webfont.js" />
-<script src="{{ bower directory }}/snap.svg/dist/snap.svg-min.js" />
-<script src="{{ bower directory }}/underscore/underscore-min.js" />
-<script src="{{ bower directory }}/js-sequence-diagrams/dist/sequence-diagram-min.js" />
+<script src="bower_components/bower-webfontloader/webfont.js" />
+<script src="bower_components/snap.svg/dist/snap.svg-min.js" />
+<script src="bower_components/underscore/underscore-min.js" />
+<script src="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js" />
 ```
 
 Also import the CSS inside the ```<head>...</head>``` section of the index.html if you plan to use the hand drawn theme:
