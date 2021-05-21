@@ -195,4 +195,4 @@ Your ```app/index.html``` should now resemble:
 </html>
 ```
 
-More ...
+Continue to [Usage]()
