@@ -146,12 +146,10 @@ Add the following content to the index.html:
   <meta name="description" content="App">
   <meta name="author" content="me">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-
 </head>
 
 <body>
-  <script src="js/scripts.js"></script>
+
 </body>
 </html>
 ```
@@ -184,16 +182,15 @@ Your ```app/index.html``` should now resemble:
   <meta name="description" content="App">
   <meta name="author" content="me">
   <link href="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
 
 </head>
 
 <body>
+
   <script src="bower_components/bower-webfontloader/webfont.js" />
   <script src="bower_components/snap.svg/dist/snap.svg-min.js" />
   <script src="bower_components/underscore/underscore-min.js" />
   <script src="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js" />
-  <script src="js/scripts.js"></script>
 </body>
 </html>
 ```
