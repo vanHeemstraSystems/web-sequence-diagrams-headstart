@@ -156,7 +156,7 @@ Add the following content to the index.html:
 </html>
 ```
 
-Include the scripts below inside the ```<head>...</head>``` section of the index.html:
+Include the scripts below inside the ```<body>...</body>``` section nearest to the closing tag ```</body>``` of the index.html:
 
 ```
 <script src="bower_components/bower-webfontloader/webfont.js" />
@@ -168,5 +168,5 @@ Include the scripts below inside the ```<head>...</head>``` section of the index
 Also import the CSS inside the ```<head>...</head>``` section of the index.html if you plan to use the hand drawn theme:
 
 ```
-<link href="{{ bower directory }}/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
+<link href="bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
 ```
