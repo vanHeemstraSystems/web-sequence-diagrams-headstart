@@ -12,6 +12,8 @@ See https://bramp.github.io/js-sequence-diagrams/
 
 See also [How to generate a sequence diagram within markdown using js sequence diagram and mkdocs](https://medium.com/tenxor/how-to-generate-a-sequence-diagram-within-markdown-using-js-sequence-diagram-and-mkdocs-91dd4fe0b8fb)
 
+See also [youtube video js-sequence-diagrams](https://www.youtube.com/watch?v=6lB6Okm8H1Q) at https://www.youtube.com/watch?v=6lB6Okm8H1Q
+
 ## 300 - Github Repository
 
 See https://github.com/bramp/js-sequence-diagrams
