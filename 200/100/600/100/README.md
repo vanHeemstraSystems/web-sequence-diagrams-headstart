@@ -13,7 +13,11 @@ $ node --version
 $ npm --version
 ```
 
-## 200 - Install Bower
+## 200 - Install Git Client
+
+See [How to install Git on CentOS 7](https://github.com/vanHeemstraSystems/how-to-install-git-on-centos-7)
+
+## 300 - Install Bower
 
 See also [https://bower.io/](https://bower.io/)
 
@@ -27,7 +31,7 @@ Check with:
 
 Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org/).
 
-## 300 - Install js-sequence-diagrams Bower Package
+## 400 - Install js-sequence-diagrams Bower Package
 
 Go inside the js-sequence-diagrams directory:
 
