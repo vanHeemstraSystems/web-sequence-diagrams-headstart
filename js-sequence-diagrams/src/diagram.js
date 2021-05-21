@@ -160,3 +160,4 @@ Diagram.parse = function(input) {
   delete diagram.parseError;
   return diagram;
 };
+
