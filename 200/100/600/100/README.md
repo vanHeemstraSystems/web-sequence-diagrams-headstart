@@ -4,6 +4,15 @@
 
 See https://nodejs.org/en/download/
 
+```$ sudo apt install nodejs```
+
+Check with:
+
+```
+$ nodejs version
+$ npm version
+```
+
 ## 200 - Install Bower
 
 See also [https://bower.io/](https://bower.io/)
