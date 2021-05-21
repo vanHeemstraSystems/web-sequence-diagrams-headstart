@@ -195,4 +195,4 @@ Your ```app/index.html``` should now resemble:
 </html>
 ```
 
-Continue to [Usage]()
+Continue to [700 - Usage](https://github.com/vanHeemstraSystems/web-sequence-diagrams-headstart/blob/main/200/100/700/README.md)
