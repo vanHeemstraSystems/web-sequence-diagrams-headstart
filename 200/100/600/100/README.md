@@ -4,7 +4,7 @@
 
 See https://nodejs.org/en/download/
 
-```$ sudo apt install nodejs```
+```$ sudo yum install nodejs```
 
 Check with:
 
