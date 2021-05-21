@@ -1,4 +1,4 @@
-# # 100 - Installation with Bower (recommended)
+# 100 - Installation with Bower (recommended)
 
 Run ```bower install bramp/js-sequence-diagrams``` and include the scripts below:
 
