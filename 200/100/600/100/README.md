@@ -1,6 +1,10 @@
 # 100 - Installation with Bower (recommended)
 
-## 100 - Install Bower
+## 100 - Install Node and NPM
+
+See https://nodejs.org/en/download/
+
+## 200 - Install Bower
 
 See also [https://bower.io/](https://bower.io/)
 
@@ -10,7 +14,7 @@ Bower is a command line utility. Install it with npm.
 
 Bower requires [node, npm](http://nodejs.org/) and [git](http://git-scm.org/).
 
-## 200 - Install js-sequence-diagrams Bower Package
+## 300 - Install js-sequence-diagrams Bower Package
 
 Run ```bower install bramp/js-sequence-diagrams``` and include the scripts below:
 
