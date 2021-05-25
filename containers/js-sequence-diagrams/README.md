@@ -40,7 +40,7 @@ Run the image you previously built:
 
 ```
 $ cd containers/js-sequence-diagrams
-docker-compose up -d
+$ docker-compose up -d
 ```
 
 ## Print the output of your app:
