@@ -1,4 +1,4 @@
-FROM blapps-docker-shared-images.apps-pwc-artifactory.asml.com/node:14
+FROM node:14
 
 # Create app directory
 WORKDIR /usr/src/app
