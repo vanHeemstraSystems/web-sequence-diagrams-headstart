@@ -19,9 +19,9 @@ Your image will now be listed by Docker:
 $ docker images
 
 # Example
-REPOSITORY              TAG        ID              CREATED
-node                    14         1934b0b038d1    5 days ago
-js-sequence-diagrams    latest     d64d3505b0d2    1 minute ago
+REPOSITORY             TAG                 IMAGE ID            CREATED             SIZE
+js-sequence-diagrams   latest              4087308536df        7 minutes ago       947MB
+node                   14                  9153ee3e2ced        12 days ago         943MB
 ```
 
 ## Run the image
