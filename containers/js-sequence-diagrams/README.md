@@ -16,6 +16,7 @@ $ docker build . -t js-sequence-diagrams
 Your image will now be listed by Docker:
 
 ```
+$ cd containers/js-sequence-diagrams
 $ docker images
 
 # Example
@@ -29,6 +30,7 @@ node                   14                  9153ee3e2ced        12 days ago      
 Copy the sample.docker-compose.yml file to docker-compose.yml (unless you want to keep a previously amended docker-compose.yml file):
 
 ```
+$ cd containers/js-sequence-diagrams
 $ cp sample.docker-compose.yml docker-compose.yml
 ```
 
@@ -37,6 +39,7 @@ Running your image with ```-d``` runs the container in detached mode, leaving th
 Run the image you previously built:
 
 ```
+$ cd containers/js-sequence-diagrams
 docker-compose up -d
 ```
 
