@@ -1,0 +1,9 @@
+version: '3.7'
+
+services:
+  js-sequence-diagrams:
+    build: .
+    container_name: "js-sequence-diagrams"
+    privileged: true
+    ports:
+      - 49160:8080
