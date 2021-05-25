@@ -4,6 +4,11 @@ README.md
 
 Based on "Dockerizing a Node.js web app" at https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
+## Prerequisites
+
+- Docker Engine & docker-compose
+- Git Client
+
 ## Building your image
 
 Go to the directory that has your Dockerfile and run the following command to build the Docker image. The -t flag lets you tag your image so it's easier to find later using the docker images command:
