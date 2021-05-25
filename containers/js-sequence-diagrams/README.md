@@ -6,8 +6,8 @@ Based on "Dockerizing a Node.js web app" at https://nodejs.org/en/docs/guides/no
 
 ## Prerequisites
 
-- Docker Engine & docker-compose
-- Git Client
+- [Docker Engine](https://github.com/vanHeemstraSystems/docker-quick-start-headstart) & [docker-compose](https://github.com/vanHeemstraSystems/docker-compose-quick-start-headstart)
+- [Git Client](https://github.com/vanHeemstraSystems/how-to-install-git-on-centos-7)
 
 ## Building your image
 
