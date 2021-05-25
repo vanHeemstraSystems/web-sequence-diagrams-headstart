@@ -2,7 +2,12 @@
   "name": "js_sequence_diagrams",
   "version": "1.0.0",
   "description": "Node.js on Docker",
-  "author": "First Last <first.last@example.com>",
+  "author": "Willem van Heemstra <willem@vanheemstrasystems.com>",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/vanHeemstraSystems/web-sequence-diagrams-headstart.git"
+  },
+  "private": true,
   "main": "server.js",
   "scripts": {
     "start": "node server.js"
