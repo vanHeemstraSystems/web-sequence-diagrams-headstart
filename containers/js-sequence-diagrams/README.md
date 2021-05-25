@@ -76,8 +76,8 @@ To test your app, get the port of your app that Docker mapped:
 $ docker ps
 
 # Example
-ID            IMAGE                                                COMMAND    ...   PORTS
-ecce33b30ebf  <your artifactory path>/js-sequence-diagrams:latest  npm start  ...   49160->8080
+CONTAINER ID        IMAGE                                       COMMAND                  CREATED             STATUS              PORTS                     NAMES
+1cb6cfbe5804        js-sequence-diagrams_js-sequence-diagrams   "docker-entrypoint.s…"   21 seconds ago      Up 15 seconds       0.0.0.0:49160->8080/tcp   js-sequence-diagrams
 ```
 
 In the example above, Docker mapped the 8080 port inside of the container to the port 49160 on your machine.
