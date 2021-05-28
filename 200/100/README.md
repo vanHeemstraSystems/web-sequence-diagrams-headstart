@@ -80,3 +80,35 @@ See [README.md](./1700/README.md)
 ## 1800 - Licence (Simplified BSD License)
 
 See [README.md](./1800/README.md)
+
+## 1900 - SQlite Database
+
+### 100 - Install SQLite
+
+See https://github.com/vanHeemstraSystems/sqlite-headstart
+
+### 100 - Create an SQLite Database
+
+```
+$ sqlite3 portfolio_sqlite.sqlite
+SQLite version 3.35.5 2021-04-19 18:32:05
+Enter ".help" for usage hints.
+sqlite> create table sequence_diagram(id integer primary key autoincrement, name varchar(50), code text);
+sqlite> insert into sequence_diagram values ('A', 'A->B: Message');
+Error: table sequence_diagram has 3 columns but 2 values were supplied
+sqlite> insert into sequence_diagram values (,'A', 'A->B: Message');
+Error: near ",": syntax error
+sqlite> insert into sequence_diagram values ('','A', 'A->B: Message');
+Error: datatype mismatch
+sqlite> insert into sequence_diagram (name, code) values ('A', 'A->B: Message');
+sqlite> insert into sequence_diagram (name, code) values ('B', 'B->C: Message');
+sqlite> insert into sequence_diagram (name, code) values ('C', 'C->D: Message');
+sqlite> insert into sequence_diagram (name, code) values ('D', 'D->E: Message');
+sqlite> insert into sequence_diagram (name, code) values ('E', 'E->F: Message');
+sqlite> select * from sequence_diagram;
+1|A|A->B: Message
+2|B|B->C: Message
+3|C|C->D: Message
+4|D|D->E: Message
+5|E|E->F: Message
+```
