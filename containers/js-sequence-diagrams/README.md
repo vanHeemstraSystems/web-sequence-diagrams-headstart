@@ -44,7 +44,54 @@ node                   14                  9153ee3e2ced        12 days ago      
 
 ## Configure NPM for Artifactory (Optional)
 
-more..
+See if you can connect to Artifactory
+
+```
+$ ping mydepartment-artifactory.asml.com
+```
+
+If successful, continue:
+
+```
+$ curl -l -k -v https://mydepartment-artifactory.mycompany.com/artifactory/api/system/ping
+```
+
+If successful (i.e. HTTP/1.1 200 OK), continue:
+
+```
+# setting the default registry to Artifactory
+$ npm config set registry https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
+# log in
+$ npm login
+```
+
+Next you should create a ```.npmrc``` file with values retrieved directly from Artifactory:
+
+Here: for USER use your company account name and for PASSWORD use your company account password.
+
+```
+$ curl -u <USER>:<PASSWORD> https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/auth
+```
+
+You will be prompted as follows:
+
+```
+_auth = <A_LONG_HASH_STRING_OF_CHARACTERS>
+always-auth = true
+email = willem.van.heemstra@mycompany.com
+```
+
+Note: the email depends on which <USER> you entered.
+
+Now save the following in a file called .npmrc next to package.json:
+
+```
+_auth = <A_LONG_HASH_STRING_OF_CHARACTERS>
+always-auth = true
+email = willem.van.heemstra@mycompany.com
+registry=https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
+```
+/containers/js-sequence-diagrams/.npmrc
 
 ## Run the image
 
