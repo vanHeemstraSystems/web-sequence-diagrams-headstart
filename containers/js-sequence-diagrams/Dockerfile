@@ -1,20 +1,45 @@
+# Based on https://snyk.io/blog/10-best-parctices-to-containerize-nodejs-web-applications-with-docker 
 FROM node:14
+
+# Set environment to production
+ENV NODE_ENV production
 
 # Create app directory
 WORKDIR /usr/src/app
 
+# Set registry
+# Registry is also defined in .npmrc
+RUN npm config set registry https://apps-pwc-artifactory.asml.com/artifactory/api/npm/npm/
+
+# Set Strict SSL to False
+RUN npm config set strict-ssl false
+
+# Install bower
+RUN npm install --global bower
+
+# Install app bower dependencies
+# When using COPY with more than one source file, the destination must be a directory and end with a /
+COPY --chown=node:node bower.json /usr/src/app/
+COPY --chown=node:node .bowerrc /usr/src/app/
+
 # Install app dependencies
 # A wildcard is used to ensure both package.json AND package-lock.json are copied
 # where available (npm@5+)
-COPY package*.json ./
+# When using COPY with more than one source file, the destination must be a directory and end with a /
+COPY --chown=node:node package*.json /usr/src/app/
 
-RUN npm install
+# Make sure you have set SELinux from Enforcing to Permissive, otherwise npm install will fail.
+# RUN npm install
 # If you are building your code for production
-# RUN npm ci --only=production
+RUN npm ci --only=production
 
 # Bundle app source
-COPY . .
+# When using COPY with more than one source file, the destination must be a directory and end with a /
+COPY --chown=node:node . /usr/src/app/
 
-EXPOSE 8080
+# Change owner
+USER node
 
 CMD [ "node", "server.js" ]
+
+EXPOSE 8080
