@@ -1,8 +1,8 @@
 {
-  "name": "js_sequence_diagrams",
+  "name": "docker_web_app",
   "version": "1.0.0",
   "description": "Node.js on Docker",
-  "author": "Willem van Heemstra <willem@vanheemstrasystems.com>",
+  "author": "Willem van Heemstra <wvanheemstra@icloud.com>",
   "repository": {
     "type": "git",
     "url": "git://github.com/vanHeemstraSystems/web-sequence-diagrams-headstart.git"
@@ -13,6 +13,7 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "bower": "^1.8.12",
     "express": "^4.16.1"
   }
 }
