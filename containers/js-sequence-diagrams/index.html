@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Your description">
+  <meta name="author" content="You">
+  <script src="/bower_components/jquery/dist/jquery.min.js"></script> 
+  <script src="/bower_components/bower-webfontloader/webfont.js"></script>
+  <script src="/bower_components/snap.svg/dist/snap.svg-min.js"></script>
+  <script src="/bower_components/underscore/underscore-min.js"></script>
+  <script src="/bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js" />  
+  <link href="/bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
+</head>
+<body>
+  <h2>Portfolio</h2>
+  <div id="diagram"></div>
+  <script>
+    var data;
+	$.get('data.txt', function(text) {
+	  data=text;
+	  console.log(data); // Optional	  
+	  var diagram = Diagram.parse(data);
+	  diagram.drawSVG("diagram", {theme: 'hand'});
+	});
+  </script>  
+</body>
+</html>
