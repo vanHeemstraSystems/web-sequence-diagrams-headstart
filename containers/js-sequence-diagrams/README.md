@@ -9,6 +9,18 @@ Based on "Dockerizing a Node.js web app" at https://nodejs.org/en/docs/guides/no
 - [Docker Engine](https://github.com/vanHeemstraSystems/docker-quick-start-headstart) & [docker-compose](https://github.com/vanHeemstraSystems/docker-compose-quick-start-headstart)
 - [Git Client](https://github.com/vanHeemstraSystems/how-to-install-git-on-centos-7)
 
+- SELinux, set security from Enforcing to Permissive (otherwise Dockerfile will error on permissions)
+```
+$ getenforce
+Enforcing
+$ sudo setenforce 0
+$ getenforce
+Permissive
+```
+- Having a ```package-lock.json``` file in the root of your nodejs app (here: containers/js-sequence-diagrams/package-lock.json)
+
+Note: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
+
 ## Building your image
 
 Go to the directory that has your Dockerfile and run the following command to build the Docker image. The -t flag lets you tag your image so it's easier to find later using the docker images command:
@@ -29,6 +41,10 @@ REPOSITORY             TAG                 IMAGE ID            CREATED          
 js-sequence-diagrams   latest              4087308536df        7 minutes ago       947MB
 node                   14                  9153ee3e2ced        12 days ago         943MB
 ```
+
+## Configure NPM for Artifactory (Optional)
+
+more..
 
 ## Run the image
 
