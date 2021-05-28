@@ -1,0 +1,21 @@
+{
+  "name": "docker_web_app",
+  "description": "Node.js on Docker",
+  "main": "server.js",
+  "authors": [
+    "Willem van Heemstra <wvanheemstra@icloud.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-sequence-diagrams": "bramp/js-sequence-diagrams#^2.0.1",
+	"jquery": "^3.6.0"
+  }
+}
