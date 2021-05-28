@@ -4,6 +4,8 @@ README.md
 
 Based on "Dockerizing a Node.js web app" at https://nodejs.org/en/docs/guides/nodejs-docker-webapp/
 
+Based on "Build a REST API with Node.js SQLite and Express JS" at https://developerhowto.com/2018/12/29/build-a-rest-api-with-node-js-and-express-js/
+
 ## Prerequisites
 
 - [Docker Engine](https://github.com/vanHeemstraSystems/docker-quick-start-headstart) & [docker-compose](https://github.com/vanHeemstraSystems/docker-compose-quick-start-headstart)
