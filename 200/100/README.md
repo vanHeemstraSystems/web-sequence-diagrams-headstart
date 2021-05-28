@@ -87,7 +87,7 @@ See [README.md](./1800/README.md)
 
 See https://github.com/vanHeemstraSystems/sqlite-headstart
 
-### 100 - Create an SQLite Database
+### 200 - Create an SQLite Database
 
 ```
 $ sqlite3 portfolio_sqlite.sqlite
