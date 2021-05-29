@@ -14,6 +14,9 @@ RUN npm config set registry https://registry.npmjs.org/
 # Set Strict SSL to False
 RUN npm config set strict-ssl false
 
+# Update npm to the latest version
+RUN npm install --global npm@latest
+
 # Install bower
 RUN npm install --global bower
 
