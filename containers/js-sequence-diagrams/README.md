@@ -24,11 +24,17 @@ Permissive
 
 Note: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
 
-- SQLite3 requires the following changes (taken care of in Dockerfile):
+- SQLite3 version 5.0.2 and newer requires the following changes: 
 
 ```
 $ npm uninstall node-pre-gyp --save
 $ npm install @mapbox/node-pre-gyp --save
+```
+
+Instead we make use of the fixed ***sqlite3 version 5.0.0*** to prevent above requirement, taken care of in ```package.json``` and ```package-lock.json```.
+
+```
+$ npm install sqlite3@5.0.0. --save-exact
 ```
 
 ## Building your image
