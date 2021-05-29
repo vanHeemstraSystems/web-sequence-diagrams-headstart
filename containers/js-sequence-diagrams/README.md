@@ -31,10 +31,11 @@ $ npm uninstall node-pre-gyp --save
 $ npm install @mapbox/node-pre-gyp --save
 ```
 
-Instead we make use of the fixed ***sqlite3 version 5.0.0*** to prevent above requirement, taken care of in ```package.json``` and ```package-lock.json```.
+Instead we make use of ***better-sqlite3*** to prevent above requirement, taken care of in ```package.json``` and ```package-lock.json```.
+See https://www.npmjs.com/package/better-sqlite3
 
 ```
-$ npm install sqlite3@5.0.0. --save-exact
+$ npm install better-sqlite3 --save
 ```
 
 ## Building your image
