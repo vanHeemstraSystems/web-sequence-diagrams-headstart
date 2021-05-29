@@ -87,6 +87,9 @@ See [README.md](./1800/README.md)
 
 See https://github.com/vanHeemstraSystems/sqlite-headstart
 
+NOTE: Install ***better-sqlite3*** with npm, see https://www.npmjs.com/package/better-sqlite3 as it is more performant.
+Instructions for Node.js on the website.
+
 ### 200 - Create an SQLite Database
 
 ```
