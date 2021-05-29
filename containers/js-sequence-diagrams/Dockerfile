@@ -1,6 +1,9 @@
 # Based on https://snyk.io/blog/10-best-parctices-to-containerize-nodejs-web-applications-with-docker 
 FROM node:latest
 
+# Install python3 from Docker Hub
+COPY --from=faucet/python3 /usr/local/bin/python3 /usr/local/bin/python3
+
 # Set environment to production
 ENV NODE_ENV production
 
