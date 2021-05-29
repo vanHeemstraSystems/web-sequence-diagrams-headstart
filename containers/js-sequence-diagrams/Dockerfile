@@ -29,7 +29,11 @@ COPY --chown=node:node .bowerrc /usr/src/app/
 COPY --chown=node:node package*.json /usr/src/app/
 
 # Make sure you have set SELinux from Enforcing to Permissive, otherwise npm install will fail.
-# RUN npm install
+# $ sudo setenforce 0
+# Switch to the mapbox version of node-pre-gyp for SQLite3 to install successfully,
+# see https://www.npmjs.com/package/node-pre-gyp
+RUN npm uninstall node-pre-gyp --save
+RUN npm install @mapbox/node-pre-gyp --save
 # If you are building your code for production
 RUN npm ci --only=production
 
