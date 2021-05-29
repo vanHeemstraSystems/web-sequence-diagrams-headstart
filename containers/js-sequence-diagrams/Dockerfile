@@ -1,5 +1,5 @@
 # Based on https://snyk.io/blog/10-best-parctices-to-containerize-nodejs-web-applications-with-docker 
-FROM node:16
+FROM node:latest
 
 # Set environment to production
 ENV NODE_ENV production
@@ -30,9 +30,9 @@ COPY --chown=node:node package*.json /usr/src/app/
 
 # Make sure you have set SELinux from Enforcing to Permissive, otherwise npm install will fail.
 # $ sudo setenforce 0
-# RUN npm install
+RUN npm install
 # If you are building your code for production
-RUN npm ci --only=production
+# RUN npm ci --only=production
 
 # Bundle app source
 # When using COPY with more than one source file, the destination must be a directory and end with a /
