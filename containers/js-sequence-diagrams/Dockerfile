@@ -9,7 +9,7 @@ WORKDIR /usr/src/app
 
 # Set registry
 # Registry is also defined in .npmrc
-RUN npm config set registry https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
+RUN npm config set registry https://registry.npmjs.org/
 
 # Set Strict SSL to False
 RUN npm config set strict-ssl false
