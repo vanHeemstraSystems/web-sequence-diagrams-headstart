@@ -92,6 +92,9 @@ _auth = <A_LONG_HASH_STRING_OF_CHARACTERS>
 always-auth = true
 email = willem.van.heemstra@mycompany.com
 registry=https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
+// sqlite3 needs longer to download, hence below timeout increase necessary
+fetch-retry-maxtimeout = 6000000
+fetch-retry-mintimeout = 1000000
 ```
 /containers/js-sequence-diagrams/.npmrc
 
