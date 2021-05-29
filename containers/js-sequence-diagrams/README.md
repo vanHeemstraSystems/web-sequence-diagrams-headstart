@@ -11,7 +11,8 @@ Based on "Build a REST API with Node.js SQLite and Express JS" at https://develo
 - [Docker Engine](https://github.com/vanHeemstraSystems/docker-quick-start-headstart) & [docker-compose](https://github.com/vanHeemstraSystems/docker-compose-quick-start-headstart)
 - [Git Client](https://github.com/vanHeemstraSystems/how-to-install-git-on-centos-7)
 
-- SELinux, set security from Enforcing to Permissive (otherwise Dockerfile will error on permissions)
+- SELinux, set security from Enforcing to Permissive (otherwise Dockerfile will error on permissions). See https://nanxiao.me/en/selinux-cause-permission-denied-issue-in-using-docker/
+
 ```
 $ getenforce
 Enforcing
@@ -23,7 +24,12 @@ Permissive
 
 Note: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
 
-- SQLite is currently only compatible with node and npm at sqlite3@5.0.0. Hence why this is a ***fixed*** version in package.json. Newer versions of sqlite3 cause errors.
+- SQLite3 requires the following changes (taken care of in Dockerfile):
+
+```
+$ npm uninstall node-pre-gyp --save
+$ npm install @mapbox/node-pre-gyp --save
+```
 
 ## Building your image
 
