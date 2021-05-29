@@ -1,5 +1,5 @@
 # Based on https://snyk.io/blog/10-best-parctices-to-containerize-nodejs-web-applications-with-docker 
-FROM node:14
+FROM node:16
 
 # Set environment to production
 ENV NODE_ENV production
