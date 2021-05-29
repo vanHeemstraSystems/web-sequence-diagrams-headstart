@@ -23,7 +23,7 @@ Permissive
 
 Note: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
 
-- SQLite is currently only compatible with node and npm at sqlite3@5.0.0. Hence why this is a ***fixed*** version in package.json. Newer versions cause errors.
+- SQLite is currently only compatible with node and npm at sqlite3@5.0.0. Hence why this is a ***fixed*** version in package.json. Newer versions of sqlite3 cause errors.
 
 ## Building your image
 
