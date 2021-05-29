@@ -23,6 +23,8 @@ Permissive
 
 Note: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
 
+- SQLite is currently only compatible with node and npm at sqlite3@5.0.0. Hence why this is a ***fixed*** version in package.json. Newer versions cause errors.
+
 ## Building your image
 
 Go to the directory that has your Dockerfile and run the following command to build the Docker image. The -t flag lets you tag your image so it's easier to find later using the docker images command:
@@ -92,9 +94,6 @@ _auth = <A_LONG_HASH_STRING_OF_CHARACTERS>
 always-auth = true
 email = willem.van.heemstra@mycompany.com
 registry=https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
-# sqlite3 needs longer to download, hence below timeout increase necessary
-fetch-retry-maxtimeout = 6000000
-fetch-retry-mintimeout = 1000000
 ```
 /containers/js-sequence-diagrams/.npmrc
 
