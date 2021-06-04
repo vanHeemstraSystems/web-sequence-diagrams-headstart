@@ -1,0 +1,49 @@
+@threshold: 600px;
+@wide-screens: ~"only screen and (min-width: @{threshold})";
+@narrow-screens: ~"only screen and (max-width: @{threshold})";
+
+.master-detail {
+  display: flex;
+  flex: 1 0 auto;
+  &__list-view,
+  &__detail-view {
+	box-sizing: border-box;
+	border: black solid 1px;
+	&:focus {
+	  outline: 0;
+	}
+  }
+  &__list-view {
+	width: 33%;
+  }
+  &__detail-view {
+	width: 67%;
+  }
+  @media @wide-screens {
+	/* Desktop */
+	&__to-list-view.ui.button {
+	  display: none;
+	}
+  }
+  @media @narrow-screens {
+	/* Mobile */
+	& {
+	  height: 100vh;
+	}
+	&__list-view,
+	&__detail-view {
+	  width: 100%;
+	  &:not(.active) {
+		display: none;
+	  }
+	}
+  }
+}
+
+#diagram {
+  padding-left: 6px
+}
+
+#downloadButtonWrapper {
+  padding-left: 6px
+}
