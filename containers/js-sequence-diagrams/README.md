@@ -22,7 +22,7 @@ Permissive
 ```
 - Having a ```package-lock.json``` file in the root of your nodejs app (here: containers/js-sequence-diagrams/package-lock.json)
 
-Note: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
+***Note***: to create such a ```package-lock.json``` file, run ```npm install``` in the root directory and the file will be automatically generated. Make sure to commit this file to your source code repository (here: Github).
 
 - SQLite3 version 5.0.2 and newer requires the following changes: 
 
@@ -64,7 +64,7 @@ node                   14                  9153ee3e2ced        12 days ago      
 See if you can connect to Artifactory
 
 ```
-$ ping mydepartment-artifactory.asml.com
+$ ping mydepartment-artifactory.mycompany.com
 ```
 
 If successful, continue:
@@ -98,7 +98,7 @@ always-auth = true
 email = willem.van.heemstra@mycompany.com
 ```
 
-Note: the email depends on which <USER> you entered.
+Note: the email depends on which ```<USER>``` you entered.
 
 Now save the following in a file called .npmrc next to package.json:
 
@@ -106,7 +106,10 @@ Now save the following in a file called .npmrc next to package.json:
 _auth = <A_LONG_HASH_STRING_OF_CHARACTERS>
 always-auth = true
 email = willem.van.heemstra@mycompany.com
-registry=https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
+registry = https://mydepartment-artifactory.mycompany.com/artifactory/api/npm/npm/
+https-proxy = http://service-account-artifactory-apps:[64 BIT ENCODED PASSWORD]@myproxy.mycompany.com:8080/
+proxy = http://service-account-artifactory-apps:[64 BIT ENCODED PASSWORD]@myproxy.mycompany.com:8080/
+strict-ssl = false
 ```
 /containers/js-sequence-diagrams/.npmrc
 
