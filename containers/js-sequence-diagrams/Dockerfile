@@ -17,6 +17,10 @@ RUN npm config set registry https://registry.npmjs.org/
 # Set Strict SSL to False
 RUN npm config set strict-ssl false
 
+# Set unsafe perm to true, to allow for sqlite3 to be installed without errors
+# See https://geedew.com/What-does-unsafe-perm-in-npm-actually-do/
+RUN npm config set unsafe-perm true
+
 # Update npm to the latest version
 RUN npm install --global npm@latest
 
@@ -36,13 +40,21 @@ COPY --chown=node:node package*.json /usr/src/app/
 
 # Make sure you have set SELinux from Enforcing to Permissive, otherwise npm install will fail.
 # $ sudo setenforce 0
-RUN npm install
+# RUN npm install
 # If you are building your code for production
-# RUN npm ci --only=production
+RUN npm ci --only=production
+
+# Install and build SQLite3 from source, as behind a corporate firewall downloading incompatibility-fixing binaries is blocked
+# RUN npm uninstall node-pre-gyp --save
+# RUN npm install @mapbox/node-pre-gyp --save
+# RUN npm install sqlite3 --build-from-source --save
 
 # Bundle app source
 # When using COPY with more than one source file, the destination must be a directory and end with a /
 COPY --chown=node:node . /usr/src/app/
+
+# Install sqlite3 from script, due to issue reported at https://forum.snapcraft.io/t/npm-install-fails-with-sqlite3-5-0-0-in-dependencies/21369
+# RUN ./install_sqlite3.sh
 
 # Change owner
 USER node
