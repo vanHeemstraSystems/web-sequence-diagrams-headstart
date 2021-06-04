@@ -1,29 +1,111 @@
 <!doctype html>
 <html lang="en">
 <head>
+  <!-- Required meta tags -->
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- Required css -->
+  <link href="/bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous"/>
+  <link href="/bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" crossorigin="anonymous"/>
+  <link href="/css/style.css" rel="stylesheet" crossorigin="anonymous"/>
   <title>Portfolio</title>
   <meta name="description" content="Your description">
   <meta name="author" content="You">
-  <script src="/bower_components/jquery/dist/jquery.min.js"></script> 
-  <script src="/bower_components/bower-webfontloader/webfont.js"></script>
-  <script src="/bower_components/snap.svg/dist/snap.svg-min.js"></script>
-  <script src="/bower_components/underscore/underscore-min.js"></script>
-  <script src="/bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js" />  
-  <link href="/bower_components/js-sequence-diagrams/dist/sequence-diagram-min.css" rel="stylesheet" />
 </head>
 <body>
-  <h2>Portfolio</h2>
-  <div id="diagram"></div>
-  <script>
-    var data;
-	$.get('data.txt', function(text) {
-	  data=text;
-	  console.log(data); // Optional	  
-	  var diagram = Diagram.parse(data);
-	  diagram.drawSVG("diagram", {theme: 'hand'});
-	});
-  </script>  
+  <div class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-brand">Portfolio</div>
+	  <form class="navbar-form pull-left">
+	    <label class="d-inline-block" for="select-theme"><small><strong>Theme:</strong></small></label>
+	    <select name="select-theme" id="select-theme" class="form-control" style="width: 100px;">
+		  <option data-url="/?theme=hand">Hand</option>
+		  <option data-url="/?theme=simple">Simple</option>
+	    </select>
+	  <!--button type="submit" class="btn btn-default">Submit</button-->
+	  </form>
+	</div>
+  </div>  
+  
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" aria-current="page" href="#">Sequence Diagrams</a>
+    </li>
+    <!--
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+    </li>
+    -->
+  </ul>  
+  
+  <!-- Based on https://codepen.io/fazouane-marouane/pen/GxPMOe -->
+  <div class="stuff-container">
+    <div class="master-detail">
+      <div tabindex="0" class="master-detail__list-view active">
+        <div class="ui relaxed divided list">
+          <div class="item" data-id="1">
+            <div class="content" style="padding:10px 6px 6px 10px">
+              <div class="header" style="font-weight:600">Single Build Pipeline</div>
+              Sequence Diagram
+            </div>
+          </div>
+		  <!--
+          <div class="item" data-id="2">
+            <div class="content">
+              <div class="header">Title 2</div>
+              Item 2
+            </div>
+          </div>
+          <div class="item" data-id="3">
+            <div class="content">
+              <div class="header">Title 3</div>
+              Item 3
+            </div>
+          </div>
+		  -->
+        </div>
+      </div>
+      <div tabindex="1" class="master-detail__detail-view">
+        <!--<button class="master-detail__to-list-view ui button">
+            Back to list
+          </button>-->
+        <div class="master-detail__detail-view__content">
+          <!-- Please select an element -->
+		  <div id="spinner" class="text-center">
+			  <div class="spinner-border" role="status">
+			  </div>
+		  </div>
+		  
+		  <div id="downloadButtonWrapper" class="dropdown">
+		    <a class="btn btn-outline" href="#" type="button" id="downloadButton" aria-expanded="false">
+			  Download as SVG
+		    </a>
+		    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+			  <li><a class="dropdown-item" href="#">SVG</a></li>
+		    </ul>
+		  </div>
+		  
+		  <div id="diagram"></div>
+		  
+        </div>
+      </div>
+    </div>
+  </div> 
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="/bower_components/jquery/dist/jquery.min.js" crossorigin="anonymous"></script> 
+  <script src="/bower_components/bower-webfontloader/webfont.js" crossorigin="anonymous"></script>
+  <script src="/bower_components/snap.svg/dist/snap.svg-min.js" crossorigin="anonymous"></script>
+  <script src="/bower_components/underscore/underscore-min.js" crossorigin="anonymous"></script>
+  <script src="/js/popper.min.js" crossorigin="anonymous"></script>
+  <script src="/bower_components/js-sequence-diagrams/dist/sequence-diagram-min.js" crossorigin="anonymous"></script>  
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js" crossorigin="anonymous"></script>
+  <script src="/bower_components/bootstrap/dist/js/bootstrap.min.js.map" crossorigin="anonymous"></script>  
+  <script src="/js/script.js"></script>
 </body>
 </html>
