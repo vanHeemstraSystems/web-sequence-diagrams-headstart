@@ -15,6 +15,11 @@ app.use('/bower_components',  express.static(path.join(__dirname, '/bower_compon
 
 app.get('/', (req, res) => {
   // res.send('Hello World\r\n');
+  res.redirect('/sequence_diagrams/1');
+  //res.sendFile(__dirname + '/index.html');
+});
+
+app.get('/sequence_diagrams/:sequenceDiagramId', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
