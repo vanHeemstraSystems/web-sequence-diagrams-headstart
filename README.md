@@ -3,6 +3,8 @@ web-sequence-diagrams-headstart
 
 Based on "Creating Your Sequence Diagram" at https://medium.com/pragmatic-programmers/creating-your-sequence-diagram-4f1aa01d3226
 
+***Tip***: Use [PatternFly](https://www.patternfly.org/) to design this web application, see https://github.com/vanHeemstraSystems/patternfly-headstart.
+
 ## 100 - Free Online Only Edition
 
 ### 100 - Web Sequence Diagrams
