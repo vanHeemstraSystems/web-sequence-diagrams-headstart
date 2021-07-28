@@ -2,6 +2,7 @@
 
 const express = require('express');
 const path = require('path');
+const db = require('./database.js');
 
 // Constants
 const PORT = 8080;

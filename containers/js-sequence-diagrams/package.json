@@ -13,10 +13,10 @@
     "start": "node server.js"
   },
   "dependencies": {
+    "@popperjs/core": "^2.9.2",
     "bower": "^1.8.12",
     "express": "^4.16.1",
     "md5": "^2.3.0",
-    "sqlite": "^4.0.23",
-    "@popperjs/core": "^2.9.2"
+    "sqlite3": "^5.0.2"
   }
 }
