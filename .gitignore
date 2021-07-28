@@ -2,3 +2,4 @@ containers/js-sequence-diagrams/.bowerrc
 containers/js-sequence-diagrams/.npmrc
 containers/js-sequence-diagrams/data.txt
 containers/js-sequence-diagrams/docker-compose.yml
+containers/js-sequence-diagrams/bower_components
