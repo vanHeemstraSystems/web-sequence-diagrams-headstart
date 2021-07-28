@@ -4,3 +4,4 @@ containers/js-sequence-diagrams/data.txt
 containers/js-sequence-diagrams/docker-compose.yml
 containers/js-sequence-diagrams/bower_components
 containers/js-sequence-diagrams/node_modules
+containers/js-sequence-diagrams/db.sqlite
