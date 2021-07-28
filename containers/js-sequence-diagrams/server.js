@@ -24,5 +24,26 @@ app.get('/sequence_diagrams/:sequenceDiagramId', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 });
 
+// Insert here other API endpoints
+app.get("/api/users", (req, res, next) => {
+  var sql = "select * from user"
+  var params = []
+  db.all(sql, params, (err, rows) => {
+      if (err) {
+        res.status(400).json({"error":err.message});
+        return;
+      }
+      res.json({
+          "message":"success",
+          "data":rows
+      })
+  });
+});
+
+// Default response for any other request
+app.use(function(req, res){
+  res.status(404);
+});
+
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
